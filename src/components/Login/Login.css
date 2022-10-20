@@ -1,0 +1,101 @@
+.float-container {
+    display:flex;
+}
+
+.left{
+    flex: 0 0 65%;
+}   
+
+.right{
+    flex:1;
+}
+ 
+
+.login-wrapper{
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+    border: 100px;
+    border-radius: 10px;
+    padding-right: 60px;
+    padding-left: 60px;
+    box-shadow:2px 2px 10px 10px #C9C9C9;
+    -webkit-box-shadow:2px 2px 10px 10px #C9C9C9;
+    -moz-box-shadow:2px 2px 10px 10px #C9C9C9;
+}
+
+.login-wrapper2 {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    
+
+    
+        /* Set the width to match that of the viewport. */
+        width: 50vw; 
+
+      
+
+}
+
+.background-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    background-color: whitesmoke;
+        /* Height and width fallback for older browsers. */
+        height: 100%;
+        width: 100%;
+    
+        /* Set the height to match that of the viewport. */
+        height: 100vh;
+    
+        /* Set the width to match that of the viewport. */
+        width: 50vw;
+    
+        /* Remove any browser-default margins. */
+        margin: 0;
+}
+
+.App {
+    background-color: white;
+  }
+  
+  .Auth-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .Auth-form {
+    width: 420px;
+    box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    background-color: white;
+  }
+  
+  .Auth-form-content {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+  
+  .Auth-form-title {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 24px;
+    color: rgb(34, 34, 34);
+    font-weight: 800;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(34, 34, 34);
+  }
+
+
+

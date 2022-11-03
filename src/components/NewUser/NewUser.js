@@ -1,16 +1,17 @@
 import React from 'react';
+
 import './NewUser.css';
 
 export default function NewUser() {
   return(
     <div className="Auth-form-container">
-      <form className="Auth-form">
+      <form className="Auth  -form">
         <div className="Auth-form-content">
           <h3 className="Auth-form-title">Cadastre-se</h3>
           <div className="text-center">
-            Já Cadastrado?{" "}
-            <span className="link-primary" >
-              Login
+  Já Cadastrado?{" "} 
+            <span className="link-primary" >  
+            <a href="/login">Login</a>
             </span>
           </div>
           <div className="form-group mt-3">
@@ -43,7 +44,7 @@ export default function NewUser() {
             </button>
           </div>
           <p className="text-center mt-2">
-            Esqueceu sua <a href="#">senha?</a>
+            Esqueceu sua <a href="/#/">senha?</a>
           </p>
         </div>
       </form>

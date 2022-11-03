@@ -1,13 +1,14 @@
 import React, { useState} from 'react';
 import PropTypes from 'prop-types';
-//import background from "./public/img/backgroundImage.jpg";
-
-
+import { useNavigate } from "react-router-dom";
 import './Login.css';
 
 
 
+/*
 async function loginUser(credentials) {
+  
+ 
   return fetch('http://localhost:8080/login', {
     method: 'POST',
     headers: {
@@ -17,32 +18,36 @@ async function loginUser(credentials) {
   })
     .then(data => data.json())
  }
+*/
 
-export default function Login({setToken}) {
+export default function Login({ setToken }) {
+
+  const navigate = useNavigate();
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
 
+  /*
   const handleSubmit = async e => {
     e.preventDefault();
     const token = await loginUser({
       username,
       password
     });
-    setToken(token);
-  }
+    //setToken(token);
+  }*/
 
   return(
     
     <div className="Auth-form-container">
-      <form className="Auth-form" onSubmit={handleSubmit}>
+      <form className="Auth-form" >
         <div className="Auth-form-content">
           <h3 className="Auth-form-title">CNH Digital</h3>
           <div className="form-group mt-3">
             <label>Email</label>
             <input
-              type="email"
+              type="text"
               className="form-control mt-1"
-              placeholder="Digite seu email"
+              placeholder="admin@admin.com.br"
               onChange={e => setUserName(e.target.value)}
             />
           </div>
@@ -56,52 +61,27 @@ export default function Login({setToken}) {
             />
           </div>
           <div className="d-grid gap-2 mt-3">
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary" onClick={() => navigate("/menu")}>
               Login
             </button>
           </div>
           <p className="forgot-password text-right mt-2">
-            Esqueceu sua <a href="#">senha?</a>
+            Esqueceu sua <a href="/#/">senha?</a>
           </p>
           <p className="create-account text-right mt-2">
-            Eu não tenho uma conta? <a href="#">Criar conta</a>
+            Eu não tenho uma conta? 
+            <a href="/newuser"
+            >Criar conta</a>
           </p>
         </div>
       </form>
+      
     </div>
-
-    /*
-    <div className="float-container">
-
-      <div className='left'>
-
-        <div className='login-wrapper'>
-          
-          <form onSubmit={handleSubmit}>
-          <h1>CNH Digital</h1>
-            <label>
-              <p>Email</p>
-              <input type="text" onChange={e => setUserName(e.target.value)}/>
-            </label>
-            <label>
-              <p>Senha</p>
-              <input type="password" onChange={e => setPassword(e.target.value)}/>
-            </label>
-            <div>
-              <button type="submit">Login</button>
-            </div>
-            <div>
-              <button type="submit">Novo Usuário</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    */
+    
   )
 }
 
+/*
 Login.propTypes = {
   setToken: PropTypes.func.isRequired
-}
-
+};*/
